@@ -220,6 +220,16 @@ export const translations = {
     prefsSuccess:
       'Correct. SharedPreferences.getInstance() gives you the async handle to local key-value storage.',
     prefsRestarting: 'Closing app and reloading saved values...',
+    codeChallengeTitle: 'Code Challenge',
+    codeChallengeInstruction1:
+      'Fill in the highlighted blank with the missing Flutter or Dart code only. Do not rewrite the whole line.',
+    codeChallengeInstruction2:
+      'The surrounding code is already correct. Your job is to make the snippet complete and valid.',
+    codeChallengeExpectedInput: 'Expected input type:',
+    codeChallengeTip:
+      'Tip: answer with the missing word or expression only, exactly as it should appear in code.',
+    codeChallengeDefaultSuccess:
+      'Great job! Challenge completed. Watch the preview update!',
     loadingPreview: 'Loading interactive preview...',
     copyCode: 'Copy',
     copiedCode: 'Copied',
@@ -502,6 +512,16 @@ export const translations = {
     prefsSuccess:
       'صحيح. SharedPreferences.getInstance() تمنحك المقبض غير المتزامن لتخزين القيم المحلية.',
     prefsRestarting: 'جارٍ إغلاق التطبيق وإعادة تحميل القيم المحفوظة...',
+    codeChallengeTitle: 'تحدي برمجي',
+    codeChallengeInstruction1:
+      'اكتب الجزء الناقص فقط من كود Flutter أو Dart داخل الفراغ المظلل، ولا تعد كتابة السطر كاملًا.',
+    codeChallengeInstruction2:
+      'الكود المحيط بالفراغ صحيح بالفعل. المطلوب منك فقط إكمال الجزء الناقص حتى يصبح المثال صحيحًا ومكتملًا.',
+    codeChallengeExpectedInput: 'نوع الإدخال المتوقع:',
+    codeChallengeTip:
+      'تلميح: اكتب الكلمة أو التعبير الناقص فقط، بنفس الشكل الذي يجب أن يظهر به داخل الكود.',
+    codeChallengeDefaultSuccess:
+      'أحسنت! اكتمل التحدي، ولاحظ كيف تتحدث المعاينة بعد الحل.',
     loadingPreview: 'جاري تحميل المعاينة التفاعلية...',
     copyCode: 'نسخ',
     copiedCode: 'تم النسخ',
