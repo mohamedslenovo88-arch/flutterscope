@@ -54,6 +54,18 @@ export function LessonPage() {
     window.localStorage.setItem('flutterscope_sidebar_visible', String(desktopSidebarVisible));
   }, [desktopSidebarVisible]);
 
+  useEffect(() => {
+    if (!lessonData) {
+      document.title = lang === 'ar' ? 'FlutterScope | الدرس غير موجود' : 'FlutterScope | Lesson Not Found';
+      return;
+    }
+
+    document.title =
+      lang === 'ar'
+        ? `FlutterScope | ${lessonData.lesson.title}`
+        : `FlutterScope | ${lessonData.lesson.title}`;
+  }, [lang, lessonData]);
+
   const markCompleted = (lessonId: string) => {
     setCompletedLessons((previousLessons) => {
       if (previousLessons.includes(lessonId)) return previousLessons;
