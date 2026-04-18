@@ -86,14 +86,13 @@ export function Home() {
             </button>
 
             <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-400 px-5 py-6 text-center text-white sm:px-8 sm:py-8">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] sm:text-sm sm:tracking-[0.3em]">FlutterScope</p>
-              <h2 className="mx-auto max-w-[12ch] break-words text-2xl font-black leading-tight sm:max-w-none sm:text-3xl md:text-4xl">Welcome to FlutterScope</h2>
-              <p className="mt-2 text-lg font-medium text-white/90">مرحبًا بك في FlutterScope</p>
-              <p className="mt-4 break-words text-sm leading-7 text-white/90 sm:mx-auto sm:max-w-2xl md:text-base">
-                Learn Flutter visually through interactive lessons, code challenges, and live previews.
-                <br />
-                تعلّم Flutter بصريًا من خلال الدروس التفاعلية، تحديات الكود، والمعاينات الحية.
-              </p>
+              <p dir="ltr" className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] sm:text-sm sm:tracking-[0.3em]">FlutterScope</p>
+              <h2 dir="ltr" className="mx-auto text-2xl font-black leading-tight sm:text-3xl md:text-4xl">Welcome to FlutterScope</h2>
+              <p dir="rtl" className="mt-2 text-lg font-medium text-white/90">مرحبًا بك في FlutterScope</p>
+              <div className="mt-4 flex flex-col gap-2 text-sm leading-7 text-white/90 sm:mx-auto sm:max-w-2xl md:text-base">
+                <p dir="ltr">Learn Flutter visually through interactive lessons, code challenges, and live previews.</p>
+                <p dir="rtl">تعلّم Flutter بصريًا من خلال الدروس التفاعلية، تحديات الكود، والمعاينات الحية.</p>
+              </div>
             </div>
 
             <div className="overflow-y-auto">
