@@ -74,8 +74,8 @@ export function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
       {showWelcomePanel && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 px-4 py-6 backdrop-blur-sm">
-          <div className="relative w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-white text-slate-900 shadow-2xl dark:bg-slate-900 dark:text-slate-100">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 px-4 py-6 backdrop-blur-sm">
+          <div className="relative mx-auto flex w-full max-w-4xl max-h-[calc(100vh-3rem)] flex-col overflow-hidden rounded-3xl border border-white/10 bg-white text-slate-900 shadow-2xl dark:bg-slate-900 dark:text-slate-100">
             <button
               type="button"
               onClick={dismissWelcomePanel}
@@ -96,7 +96,8 @@ export function Home() {
               </p>
             </div>
 
-            <div className="grid gap-6 px-8 py-8 md:grid-cols-2">
+            <div className="overflow-y-auto">
+              <div className="grid gap-6 px-8 py-8 md:grid-cols-2">
               <section className="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-700 dark:bg-slate-950/60">
                 <h3 className="mb-4 text-lg font-bold text-slate-900 dark:text-slate-100">English Guide</h3>
                 <ul className="space-y-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
@@ -118,7 +119,7 @@ export function Home() {
               </section>
             </div>
 
-            <div className="flex flex-col gap-4 border-t border-slate-200 px-8 py-6 dark:border-slate-800 md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-col gap-4 border-t border-slate-200 px-8 py-6 dark:border-slate-800 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">Developed by Mohammed Taha</p>
                 <p className="text-sm text-slate-500 dark:text-slate-400">تم تطوير هذه التجربة بواسطة Mohammed Taha</p>
@@ -139,6 +140,7 @@ export function Home() {
                 >
                   Start Learning / ابدأ التعلّم
                 </Link>
+              </div>
               </div>
             </div>
           </div>
