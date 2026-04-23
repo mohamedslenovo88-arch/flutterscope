@@ -7,9 +7,12 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
-  const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
-  const productionBase =
-    env.BASE_PATH || (repoName ? `/${repoName}/` : '/');
+  // Cloudflare Workers serve this app from the origin root by default.
+  // Do not infer a repo-based base path from CI environment variables such as
+  // GITHUB_REPOSITORY, because that rewrites asset URLs to /<repo>/... and
+  // breaks workers.dev deployments. Use BASE_PATH only when deploying under an
+  // intentional subpath.
+  const productionBase = env.BASE_PATH || '/';
 
   return {
     base: mode === 'production' ? productionBase : '/',
